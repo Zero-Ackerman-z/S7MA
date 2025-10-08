@@ -9,18 +9,30 @@ using Unity.Services.CloudSave;
 
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-public class UnityPlayerAuth : MonoBehaviour
+public class AuthManager : MonoBehaviour
 {
-    public event Action<PlayerInfo, string> OnSingedIn;
-    public event Action<String> OnUpdateName;
-    private PlayerInfo playerInfo;
+    public static AuthManager Instance { get; private set; }
 
-    private async void Start()
+    public event Action<PlayerInfo, string> OnSignedIn;
+    //public event Action OnSignedOut;
+
+    public event Action<String> OnUpdateName;
+    private PlayerInfo _playerInfo;
+    private async void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else { Destroy(gameObject); return; }
+
+        DontDestroyOnLoad(gameObject);
+        await UnityServices.InitializeAsync();
+        SetupEvents();
+    }
+/*    private async void Start()
     {
         await UnityServices.InitializeAsync();
         SetupEvents();
         PlayerAccountService.Instance.SignedIn += SignIn;
-    }
+    }*/
 
     private void SetupEvents()
     {
@@ -43,8 +55,20 @@ public class UnityPlayerAuth : MonoBehaviour
             Debug.Log("Player session expired");
         };
     }
-
+    public async Task SignInAnonymouslyAsync()
+    {
+        try
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+            await PostSignIn();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error en SignInAnonymouslyAsync: {ex}");
+        }
+    }
     //->Lo puedes llamar a traves de un boton
+    /*
     public async Task InitSignIn()
     {
         await PlayerAccountService.Instance.StartSignInAsync();
@@ -59,7 +83,48 @@ public class UnityPlayerAuth : MonoBehaviour
         {
             Debug.Log(ex);
         }
+    }*/
+    public async Task SignInWithUnityAccountAsync()
+    {
+        try
+        {
+            await PlayerAccountService.Instance.StartSignInAsync();
+            string accessToken = PlayerAccountService.Instance.AccessToken;
+            await AuthenticationService.Instance.SignInWithUnityAsync(accessToken);
+            await PostSignIn();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error en SignInWithUnityAccountAsync: {ex}");
+        }
     }
+    private async Task PostSignIn()
+    {
+        //_playerInfo = AuthenticationService.Instance.PlayerInfo;
+        //string name = await AuthenticationService.Instance.GetPlayerNameAsync();
+        //OnSignedIn?.Invoke(_playerInfo, name);
+
+        // Cargar o crear datos del jugador
+        await PlayerDataHandler.Instance.LoadOrCreatePlayerData();
+
+        // Redirigir a la escena de Menú
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
+    }
+    // === Actualizar nombre ===
+    public async Task UpdatePlayerName(string newName)
+    {
+        try
+        {
+            await AuthenticationService.Instance.UpdatePlayerNameAsync(newName);
+            string updatedName = await AuthenticationService.Instance.GetPlayerNameAsync();
+            OnUpdateName?.Invoke(updatedName);
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error al actualizar nombre: {ex}");
+        }
+    }
+    /*
     private async Task SignInWithUnityAuth()
     {
         try
@@ -90,6 +155,7 @@ public class UnityPlayerAuth : MonoBehaviour
 
         OnUpdateName?.Invoke(name);
     }
+    */
     public async Task DeleteAccountUnityAsync()
     {
         try

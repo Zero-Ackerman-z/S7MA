@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: d0e408530b6686b4d859e5e0d5a49a2e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_0
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1239
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903e3a5a575cf5747a76a120002170f3
+      internalID: -1789009285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1348
+        width: 127
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49527daea6ef524b91322a4c940ca25
+      internalID: -844481893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1659
+        width: 23
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264c77ef06fadec4c91514facfab8e4a
+      internalID: 1638389002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_3
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 1700
+        width: 23
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa142bce088725c479aa3dc72b018382
+      internalID: -683248158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_4
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1663
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67de62698f4a4244a3543dc9b99901e
+      internalID: -686545048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_5
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1664
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5257d4790da1dcd4bb83c169f22fa322
+      internalID: -1911105759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_6
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1664
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1de27160ce8f3644baeda31ba9d4a02
+      internalID: -550042442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_7
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 1664
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d302a76be6b1d4f4e94bad1345bc0ab9
+      internalID: 1449074757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_8
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 1549
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1111e1bd12492fa47a9092da47a1145d
+      internalID: 692516891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_9
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 1663
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38c63c54cf430e419ac2eb1318e341a
+      internalID: -1513526404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_10
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1642
+        width: 32
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e673dcd47ed081e438ef81d69db103b4
+      internalID: -828698497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_11
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1569
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcad2b2fd64a1cc4ab6634ed896d09e5
+      internalID: 309499950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_12
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 1496
+        width: 35
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b7432c23897fc4f94999d3a160a1ae
+      internalID: 1251673916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_13
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1423
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adee9cc5ca1986649a39de15e23c40f7
+      internalID: 683330669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_14
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1427
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aea6ff152b878d4fbbace92273dc66d
+      internalID: 988667033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_15
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 1439
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a76723405ac9f142bdfb8fda9cdd19d
+      internalID: 2043653133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_16
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1501
+        width: 77
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00100dc5f5e3d9541b96360f02264066
+      internalID: 679618394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_17
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1647
+        width: 76
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974f12ebd16cefe4cafc446bb477f618
+      internalID: 2021061679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_18
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 1332
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50dcf4f101b7234592dd147957f905e
+      internalID: 398030243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_19
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1700
+        width: 25
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c80951836aa7b04ab261ed1dd8e302e
+      internalID: -1477032660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_20
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 1700
+        width: 24
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b1f27189dd33d40b82dbee7cfb0089
+      internalID: -243523866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1198
+        width: 112
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65e1457dcd50b442a7815253855e77b
+      internalID: -533238819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_22
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 921
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bce89077f375284d8f025e91ca9f55e
+      internalID: -93231358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_23
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 860
+        width: 41
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8280bc471af97d244a05157961ed7674
+      internalID: -724086933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_24
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1224
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bc40ae08421e84a9421071cfd3dec7
+      internalID: -826557682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC _ Computer - Deltarune - User Interface - Battle Menu_25
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 1224
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424616e754e13134485e2d9e5daa0753
+      internalID: 1116693712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 586517a0d49fb0a41ba97d1ff00e108c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PC _ Computer - Deltarune - User Interface - Battle Menu_0: -1789009285
+      PC _ Computer - Deltarune - User Interface - Battle Menu_1: -844481893
+      PC _ Computer - Deltarune - User Interface - Battle Menu_10: -828698497
+      PC _ Computer - Deltarune - User Interface - Battle Menu_11: 309499950
+      PC _ Computer - Deltarune - User Interface - Battle Menu_12: 1251673916
+      PC _ Computer - Deltarune - User Interface - Battle Menu_13: 683330669
+      PC _ Computer - Deltarune - User Interface - Battle Menu_14: 988667033
+      PC _ Computer - Deltarune - User Interface - Battle Menu_15: 2043653133
+      PC _ Computer - Deltarune - User Interface - Battle Menu_16: 679618394
+      PC _ Computer - Deltarune - User Interface - Battle Menu_17: 2021061679
+      PC _ Computer - Deltarune - User Interface - Battle Menu_18: 398030243
+      PC _ Computer - Deltarune - User Interface - Battle Menu_19: -1477032660
+      PC _ Computer - Deltarune - User Interface - Battle Menu_2: 1638389002
+      PC _ Computer - Deltarune - User Interface - Battle Menu_20: -243523866
+      PC _ Computer - Deltarune - User Interface - Battle Menu_21: -533238819
+      PC _ Computer - Deltarune - User Interface - Battle Menu_22: -93231358
+      PC _ Computer - Deltarune - User Interface - Battle Menu_23: -724086933
+      PC _ Computer - Deltarune - User Interface - Battle Menu_24: -826557682
+      PC _ Computer - Deltarune - User Interface - Battle Menu_25: 1116693712
+      PC _ Computer - Deltarune - User Interface - Battle Menu_3: -683248158
+      PC _ Computer - Deltarune - User Interface - Battle Menu_4: -686545048
+      PC _ Computer - Deltarune - User Interface - Battle Menu_5: -1911105759
+      PC _ Computer - Deltarune - User Interface - Battle Menu_6: -550042442
+      PC _ Computer - Deltarune - User Interface - Battle Menu_7: 1449074757
+      PC _ Computer - Deltarune - User Interface - Battle Menu_8: 692516891
+      PC _ Computer - Deltarune - User Interface - Battle Menu_9: -1513526404
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
