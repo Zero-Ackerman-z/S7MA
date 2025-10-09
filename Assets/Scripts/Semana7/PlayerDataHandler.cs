@@ -25,16 +25,7 @@ public class PlayerDataHandler : MonoBehaviour
 
     public PlayerData CurrentData { get; private set; }
 
-    private const string PLAYER_NAME_KEY = "PLAYER_NAME";
-    private const string PLAYER_LEVEL_KEY = "PLAYER_LEVEL";
-    private const string PLAYER_EXP_KEY = "PLAYER_EXP";
-    private const string PLAYER_SKILL_KEY = "PLAYER_SKILL_POINTS";
-    private const string PLAYER_FIGHT_KEY = "PLAYER_FIGHT";
-    private const string PLAYER_DEFENSE_KEY = "PLAYER_DEFENSE";
-    private const string PLAYER_MAGIC_KEY = "PLAYER_MAGIC";
-    private const string PLAYER_ITEM_KEY = "PLAYER_ITEM";
-
-
+    private const string PLAYER_DATA_KEY = "player_profile";
 
     private void Awake()
     {
@@ -47,25 +38,17 @@ public class PlayerDataHandler : MonoBehaviour
     {
         try
         {
-            var keys = new HashSet<string>
-            {
-                PLAYER_NAME_KEY, PLAYER_LEVEL_KEY, PLAYER_EXP_KEY,
-                PLAYER_SKILL_KEY, PLAYER_FIGHT_KEY, PLAYER_DEFENSE_KEY,
-                PLAYER_MAGIC_KEY, PLAYER_ITEM_KEY
-            };
-            var data = await CloudSaveService.Instance.Data.Player.LoadAsync(keys);
+            var data = await CloudSaveService.Instance.Data.Player.LoadAsync(new HashSet<string> { PLAYER_DATA_KEY });
 
-            CurrentData = new PlayerData
+            if (data.TryGetValue(PLAYER_DATA_KEY, out var savedData))
             {
-                playerName = data.ContainsKey(PLAYER_NAME_KEY) ? data[PLAYER_NAME_KEY].Value.GetAs<string>() : "NuevoJugador",
-                level = data.ContainsKey(PLAYER_LEVEL_KEY) ? data[PLAYER_LEVEL_KEY].Value.GetAs<int>() : 1,
-                experience = data.ContainsKey(PLAYER_EXP_KEY) ? data[PLAYER_EXP_KEY].Value.GetAs<int>() : 0,
-                skillPoints = data.ContainsKey(PLAYER_SKILL_KEY) ? data[PLAYER_SKILL_KEY].Value.GetAs<int>() : 0,
-                fight = data.ContainsKey(PLAYER_FIGHT_KEY) ? data[PLAYER_FIGHT_KEY].Value.GetAs<int>() : 1,
-                defense = data.ContainsKey(PLAYER_DEFENSE_KEY) ? data[PLAYER_DEFENSE_KEY].Value.GetAs<int>() : 1,
-                magic = data.ContainsKey(PLAYER_MAGIC_KEY) ? data[PLAYER_MAGIC_KEY].Value.GetAs<int>() : 1,
-                item = data.ContainsKey(PLAYER_ITEM_KEY) ? data[PLAYER_ITEM_KEY].Value.GetAs<int>() : 1
-            };
+                CurrentData = JsonUtility.FromJson<PlayerData>(savedData.Value.GetAs<string>());
+                Debug.Log(" Datos cargados");
+            }
+            else
+            {
+                await CreateDefaultPlayerData();
+            }
         }
         catch (Exception ex)
         {
@@ -93,17 +76,8 @@ public class PlayerDataHandler : MonoBehaviour
 
     public async Task SavePlayerData()
     {
-        var data = new Dictionary<string, object>
-        {
-            { PLAYER_NAME_KEY, CurrentData.playerName },
-            { PLAYER_LEVEL_KEY, CurrentData.level },
-            { PLAYER_EXP_KEY, CurrentData.experience },
-            { PLAYER_SKILL_KEY, CurrentData.skillPoints },
-            { PLAYER_FIGHT_KEY, CurrentData.fight },
-            { PLAYER_DEFENSE_KEY, CurrentData.defense },
-            { PLAYER_MAGIC_KEY, CurrentData.magic },
-            { PLAYER_ITEM_KEY, CurrentData.item }
-        };
+        string json = JsonUtility.ToJson(CurrentData);
+        var data = new Dictionary<string, object> { { PLAYER_DATA_KEY, json } };
         await CloudSaveService.Instance.Data.Player.SaveAsync(data);
         Debug.Log("Datos guardados.");
     }
