@@ -4683,6 +4683,7 @@ MonoBehaviour:
   subMagicBtn: {fileID: 539574766}
   addItemBtn: {fileID: 192834952}
   subItemBtn: {fileID: 794076740}
+  playerStatsSystem: {fileID: 0}
 --- !u!1 &1721020787
 GameObject:
   m_ObjectHideFlags: 0
