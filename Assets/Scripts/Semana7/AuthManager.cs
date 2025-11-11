@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 using Unity.Services.Authentication;
 using Unity.Services.Core;
@@ -26,6 +26,7 @@ public class AuthManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         await UnityServices.InitializeAsync();
         SetupEvents();
+        PlayerAccountService.Instance.SignedIn += HandleUnityPlayerAccountSignedIn;
     }
 /*    private async void Start()
     {
@@ -84,18 +85,30 @@ public class AuthManager : MonoBehaviour
             Debug.Log(ex);
         }
     }*/
+
     public async Task SignInWithUnityAccountAsync()
     {
         try
         {
             await PlayerAccountService.Instance.StartSignInAsync();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"Error al iniciar el flujo de Player Account Sign In: {ex}");
+        }
+    }    
+
+    private async void HandleUnityPlayerAccountSignedIn()
+    {
+        try
+        {
             string accessToken = PlayerAccountService.Instance.AccessToken;
             await AuthenticationService.Instance.SignInWithUnityAsync(accessToken);
             await PostSignIn();
         }
         catch (Exception ex)
         {
-            Debug.LogError($"Error en SignInWithUnityAccountAsync: {ex}");
+            Debug.LogError($"Error al completar SignInWithUnityAsync: {ex}");
         }
     }
     private async Task PostSignIn()
@@ -107,7 +120,7 @@ public class AuthManager : MonoBehaviour
         // Cargar o crear datos del jugador
         await PlayerDataHandler.Instance.LoadOrCreatePlayerData();
 
-        // Redirigir a la escena de Men�
+        // Redirigir a la escena de Menú
         UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
     }
     // === Actualizar nombre ===

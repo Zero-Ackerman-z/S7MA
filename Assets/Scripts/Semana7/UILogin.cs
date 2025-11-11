@@ -45,13 +45,13 @@ public class UILogin : MonoBehaviour
         anonLoginButton.onClick.AddListener(() => OnSelectLogin(true));
         unityLoginButton.onClick.AddListener(() => OnSelectLogin(false));
 
-         AuthManager.Instance.OnSignedIn += OnPlayerSignedIn;
     }
 
     private void Start()
     {
         panelSelectLogin.SetActive(true);
         loginPanel.SetActive(false);
+        AuthManager.Instance.OnSignedIn += OnPlayerSignedIn;
     }
     private async void OnSelectLogin(bool isAnonymous)
     {
@@ -113,18 +113,19 @@ public class UILogin : MonoBehaviour
     {
         await unityPlayerAuth.InitSignIn();
     }*/
+    
     private void OnPlayerSignedIn(Unity.Services.Authentication.PlayerInfo info, string name)
     {
-        // No mostramos nada en esta escena
-        // El AuthManager automáticamente cambiará a la escena del menú
     }
     private void OnDisable()
     {
         anonLoginButton.onClick.RemoveAllListeners();
         unityLoginButton.onClick.RemoveAllListeners();
-        AuthManager.Instance.OnSignedIn -= OnPlayerSignedIn;
-
-        // AuthManager.Instance.OnSignedIn -= OnSignedIn;
+        if (AuthManager.Instance != null)
+        {
+            AuthManager.Instance.OnSignedIn -= OnPlayerSignedIn;
+        }
+        //AuthManager.Instance.OnSignedIn -= OnSignedIn;
         /*
         loginButton?.onClick.RemoveListener(LoginButton);
         unityPlayerAuth.OnSingedIn -= UnityPlayerOnSignedIn;*/
